@@ -1,5 +1,6 @@
 import React from "react";
 import prem from "../assets/prem.png";
+import logo from "../assets/Rectangle3image.png";
 export const AboutMe = () => {
   return (
     <section id="about" class="container">
@@ -8,7 +9,7 @@ export const AboutMe = () => {
       </div>
       <div class="row">
         <div class="col-md-4 mb-3">
-          <img src={prem} alt="some img" width="100%" />
+          <img src={logo} alt="some img" width="100%" />
         </div>
         <div class="col-md-8">
           <p>
