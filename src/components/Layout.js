@@ -1,16 +1,15 @@
 import React from "react";
+import { Footer } from "./Footer";
+import { TopNav } from "./TopNav";
 
 export const Layout = ({ children }) => {
   return (
     <>
-      {children}
-      <footer class="bg-dark text-light p-5 text-center mt-5">
-        Copyright &copy; All right Reserved. Made with 💓 by me 🤷‍♀️
-      </footer>
+      <TopNav />
 
-      <a href="#navbar" id="goup">
-        <i class="fa-solid fa-circle-up"></i>
-      </a>
+      <div className="main-layout">{children}</div>
+
+      <Footer />
     </>
   );
 };

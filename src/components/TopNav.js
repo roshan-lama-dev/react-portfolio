@@ -1,13 +1,42 @@
 import React from "react";
 import logo from "../assets/logo.png";
-
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
+import NavDropdown from "react-bootstrap/NavDropdown";
 export const TopNav = () => {
   return (
-    <div id="navbar" class="topNav">
-      <nav class="navbar navbar-expand-md bg-none">
+    <Navbar expand="md" className="topNav" id="navbar">
+      <Container>
+        <Link to="/">
+          <img src={logo} alt="logo" width="60px" />
+        </Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            {/* <Nav.Link href="#home">Home</Nav.Link> */}
+            <Link className="nav-link" to="/skills">
+              Skill
+            </Link>
+            <Link className="nav-link" to="/projects">
+              Project
+            </Link>
+            <Link className="nav-link" to="/contact">
+              Contact
+            </Link>
+            <Link className="nav-link" to="/about">
+              About Me
+            </Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    // <div id="navbar" class="topNav">
+    /* <nav class="navbar navbar-expand-md bg-none">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src={logo} alt="logo" width="60px" />
+            
           </a>
           <button
             class="navbar-toggler"
@@ -44,8 +73,8 @@ export const TopNav = () => {
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
-    </div>
+    //     </div>
+    //   </nav> */
+    // </div>
   );
 };
